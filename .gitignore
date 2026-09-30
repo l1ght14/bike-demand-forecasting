@@ -11,3 +11,6 @@ data/raw/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Private interview preparation - study notes, not part of the public project.
+docs/
