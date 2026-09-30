@@ -1,0 +1,8 @@
+# Only what is actually imported in src/ and tests/. Pinned to the versions the committed
+# artefacts were produced with, so a fresh clone reproduces the documented numbers exactly.
+# scikit-learn's tree ensembles are run single-threaded (n_jobs=1) for float determinism, so
+# BLAS thread counts do not affect the forecast bytes.
+pandas==3.0.6
+numpy==2.4.1
+scikit-learn==1.9.1
+matplotlib==3.11.2

@@ -1,0 +1,816 @@
+{
+  "best_feature_set": "with_weather",
+  "best_model": "gradient_boosting",
+  "data_quality": {
+    "clean_rows": 731,
+    "duplicate_dates": 0,
+    "end_date": "2012-12-31",
+    "leaky_columns": [
+      "casual",
+      "registered",
+      "instant",
+      "season"
+    ],
+    "non_daily_gaps": 0,
+    "null_cells": 0,
+    "raw_rows": 731,
+    "rows_dropped": 0,
+    "span_days": 731,
+    "start_date": "2011-01-01",
+    "target_max": 8714,
+    "target_mean": 4504.3488,
+    "target_min": 22,
+    "target_std": 1937.2115,
+    "target_zeros": 0
+  },
+  "holdout": {
+    "calibrated": false,
+    "empirical_coverage": 0.6905,
+    "horizon_weekday_confound": {
+      "horizon_1": [
+        6
+      ],
+      "horizon_2": [
+        0
+      ],
+      "horizon_3": [
+        1
+      ],
+      "horizon_4": [
+        2
+      ],
+      "horizon_5": [
+        3
+      ],
+      "horizon_6": [
+        4
+      ],
+      "horizon_7": [
+        5
+      ]
+    },
+    "interval_diagnosis": {
+      "bias_above_naive": 13.07,
+      "direction": "one-sided: actuals fall below the forecast",
+      "model_bias": 472.7843,
+      "naive_bias": 459.7143,
+      "share_above_forecast": 0.3214,
+      "share_below_forecast": 0.6786
+    },
+    "mae": 940.9689,
+    "mase": 1.0981,
+    "mase_scale": 856.9194,
+    "mean_band_width": 2377.3021,
+    "mean_bias": 472.7843,
+    "n": 84,
+    "naive_mae_same_rows": 1513.881,
+    "naive_mean_bias": 459.7143,
+    "nominal_coverage": 0.8,
+    "per_horizon_is_confounded_with_weekday": true,
+    "residual_acf": {
+      "lag_0": 1.0,
+      "lag_1": 0.5919,
+      "lag_10": -0.1875,
+      "lag_11": -0.2391,
+      "lag_12": -0.3087,
+      "lag_13": -0.3396,
+      "lag_14": -0.1917,
+      "lag_15": -0.0938,
+      "lag_16": -0.0773,
+      "lag_17": -0.044,
+      "lag_18": -0.1186,
+      "lag_19": -0.1275,
+      "lag_2": 0.3284,
+      "lag_20": -0.0923,
+      "lag_21": -0.0461,
+      "lag_3": 0.1748,
+      "lag_4": 0.1528,
+      "lag_5": 0.1181,
+      "lag_6": 0.0863,
+      "lag_7": 0.049,
+      "lag_8": -0.0452,
+      "lag_9": -0.1202
+    },
+    "residual_acf_weekly_peak": 0.049,
+    "rmse": 1284.3301,
+    "smape": 24.4781
+  },
+  "holdout_start": "2012-10-02",
+  "horizon_days": 7,
+  "mase_scale": 856.9194,
+  "mase_scale_rows": 640,
+  "n_dev_folds": 33,
+  "n_holdout_folds": 12,
+  "per_horizon": [
+    {
+      "horizon": 1,
+      "mae": 1399.29,
+      "mase": 1.6329,
+      "mase_scale": 856.9194,
+      "mean_actual": 4494.5,
+      "n": 12,
+      "rmse": 1686.2797,
+      "smape": 31.9181,
+      "weekday": "Sun",
+      "weekday_confounded": true
+    },
+    {
+      "horizon": 2,
+      "mae": 1064.5976,
+      "mase": 1.2424,
+      "mase_scale": 856.9194,
+      "mean_actual": 4788.0,
+      "n": 12,
+      "rmse": 1460.2276,
+      "smape": 36.0665,
+      "weekday": "Mon",
+      "weekday_confounded": true
+    },
+    {
+      "horizon": 3,
+      "mae": 921.056,
+      "mase": 1.0748,
+      "mase_scale": 856.9194,
+      "mean_actual": 5044.8,
+      "n": 12,
+      "rmse": 1326.0149,
+      "smape": 27.2416,
+      "weekday": "Tue",
+      "weekday_confounded": true
+    },
+    {
+      "horizon": 4,
+      "mae": 468.2258,
+      "mase": 0.5464,
+      "mase_scale": 856.9194,
+      "mean_actual": 5508.6,
+      "n": 12,
+      "rmse": 638.4861,
+      "smape": 15.8324,
+      "weekday": "Wed",
+      "weekday_confounded": true
+    },
+    {
+      "horizon": 5,
+      "mae": 935.7465,
+      "mase": 1.092,
+      "mase_scale": 856.9194,
+      "mean_actual": 5340.1,
+      "n": 12,
+      "rmse": 1335.4324,
+      "smape": 19.5593,
+      "weekday": "Thu",
+      "weekday_confounded": true
+    },
+    {
+      "horizon": 6,
+      "mae": 812.8338,
+      "mase": 0.9486,
+      "mase_scale": 856.9194,
+      "mean_actual": 5383.5,
+      "n": 12,
+      "rmse": 1031.5794,
+      "smape": 15.0964,
+      "weekday": "Fri",
+      "weekday_confounded": true
+    },
+    {
+      "horizon": 7,
+      "mae": 985.0323,
+      "mase": 1.1495,
+      "mase_scale": 856.9194,
+      "mean_actual": 5128.4,
+      "n": 12,
+      "rmse": 1247.881,
+      "smape": 25.6324,
+      "weekday": "Sat",
+      "weekday_confounded": true
+    }
+  ],
+  "results": [
+    {
+      "dev": {
+        "mae": 682.1914,
+        "mase": 0.7961,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 764.1586,
+            "mase": 0.8918,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1042.8737,
+            "smape": 16.1171
+          },
+          {
+            "horizon": 2,
+            "mae": 617.5576,
+            "mase": 0.7207,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 871.4991,
+            "smape": 11.6801
+          },
+          {
+            "horizon": 3,
+            "mae": 521.7643,
+            "mase": 0.6089,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 653.8072,
+            "smape": 8.9709
+          },
+          {
+            "horizon": 4,
+            "mae": 648.7711,
+            "mase": 0.7571,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 820.8698,
+            "smape": 12.0448
+          },
+          {
+            "horizon": 5,
+            "mae": 586.9857,
+            "mase": 0.685,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 744.4063,
+            "smape": 10.0552
+          },
+          {
+            "horizon": 6,
+            "mae": 748.0021,
+            "mase": 0.8729,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 994.4543,
+            "smape": 12.5527
+          },
+          {
+            "horizon": 7,
+            "mae": 888.1005,
+            "mase": 1.0364,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1128.0822,
+            "smape": 14.7986
+          }
+        ],
+        "rmse": 907.4325,
+        "smape": 12.3171
+      },
+      "feature_set": "with_weather",
+      "model": "gradient_boosting"
+    },
+    {
+      "dev": {
+        "mae": 805.6313,
+        "mase": 0.9401,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 863.1262,
+            "mase": 1.0072,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1128.6543,
+            "smape": 17.2341
+          },
+          {
+            "horizon": 2,
+            "mae": 702.7787,
+            "mase": 0.8201,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 888.5607,
+            "smape": 13.0308
+          },
+          {
+            "horizon": 3,
+            "mae": 629.7414,
+            "mase": 0.7349,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 763.9194,
+            "smape": 10.4787
+          },
+          {
+            "horizon": 4,
+            "mae": 785.9469,
+            "mase": 0.9172,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 883.3091,
+            "smape": 13.4843
+          },
+          {
+            "horizon": 5,
+            "mae": 641.9295,
+            "mase": 0.7491,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 775.8251,
+            "smape": 10.1522
+          },
+          {
+            "horizon": 6,
+            "mae": 955.9235,
+            "mase": 1.1155,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1186.7466,
+            "smape": 15.4622
+          },
+          {
+            "horizon": 7,
+            "mae": 1059.9725,
+            "mase": 1.237,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1334.2792,
+            "smape": 17.3854
+          }
+        ],
+        "rmse": 1015.4367,
+        "smape": 13.8897
+      },
+      "feature_set": "with_weather",
+      "model": "ridge"
+    },
+    {
+      "dev": {
+        "mae": 823.8529,
+        "mase": 0.9614,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 953.9583,
+            "mase": 1.1132,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1262.4446,
+            "smape": 19.9085
+          },
+          {
+            "horizon": 2,
+            "mae": 738.8338,
+            "mase": 0.8622,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1045.3672,
+            "smape": 14.6695
+          },
+          {
+            "horizon": 3,
+            "mae": 578.1489,
+            "mase": 0.6747,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 738.3777,
+            "smape": 10.5586
+          },
+          {
+            "horizon": 4,
+            "mae": 721.934,
+            "mase": 0.8425,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 852.4669,
+            "smape": 13.0773
+          },
+          {
+            "horizon": 5,
+            "mae": 731.8158,
+            "mase": 0.854,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 887.4682,
+            "smape": 12.3182
+          },
+          {
+            "horizon": 6,
+            "mae": 1003.4283,
+            "mase": 1.171,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1219.883,
+            "smape": 17.2023
+          },
+          {
+            "horizon": 7,
+            "mae": 1038.851,
+            "mase": 1.2123,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1307.8377,
+            "smape": 17.2202
+          }
+        ],
+        "rmse": 1065.3379,
+        "smape": 14.9935
+      },
+      "feature_set": "with_weather",
+      "model": "random_forest"
+    },
+    {
+      "dev": {
+        "mae": 868.739,
+        "mase": 1.0138,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 950.8943,
+            "mase": 1.1097,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1385.6486,
+            "smape": 19.372
+          },
+          {
+            "horizon": 2,
+            "mae": 794.4032,
+            "mase": 0.927,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1128.0134,
+            "smape": 15.0363
+          },
+          {
+            "horizon": 3,
+            "mae": 720.829,
+            "mase": 0.8412,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 939.5149,
+            "smape": 12.1228
+          },
+          {
+            "horizon": 4,
+            "mae": 917.2565,
+            "mase": 1.0704,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1088.9695,
+            "smape": 16.4456
+          },
+          {
+            "horizon": 5,
+            "mae": 819.1895,
+            "mase": 0.956,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 968.5833,
+            "smape": 13.9176
+          },
+          {
+            "horizon": 6,
+            "mae": 791.2219,
+            "mase": 0.9233,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1056.9845,
+            "smape": 12.6226
+          },
+          {
+            "horizon": 7,
+            "mae": 1087.3786,
+            "mase": 1.2689,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1360.6518,
+            "smape": 18.2932
+          }
+        ],
+        "rmse": 1144.4102,
+        "smape": 15.4014
+      },
+      "feature_set": "calendar_only",
+      "model": "ridge"
+    },
+    {
+      "dev": {
+        "mae": 977.5551,
+        "mase": 1.1408,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 1133.2061,
+            "mase": 1.3224,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1520.0964,
+            "smape": 20.3905
+          },
+          {
+            "horizon": 2,
+            "mae": 788.8327,
+            "mase": 0.9205,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1070.9576,
+            "smape": 14.0404
+          },
+          {
+            "horizon": 3,
+            "mae": 838.522,
+            "mase": 0.9785,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1021.6123,
+            "smape": 13.1568
+          },
+          {
+            "horizon": 4,
+            "mae": 937.5234,
+            "mase": 1.0941,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1128.6383,
+            "smape": 15.2938
+          },
+          {
+            "horizon": 5,
+            "mae": 776.8561,
+            "mase": 0.9066,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1121.9838,
+            "smape": 11.067
+          },
+          {
+            "horizon": 6,
+            "mae": 1222.6353,
+            "mase": 1.4268,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1611.1477,
+            "smape": 19.0408
+          },
+          {
+            "horizon": 7,
+            "mae": 1145.3099,
+            "mase": 1.3365,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1535.1199,
+            "smape": 18.0411
+          }
+        ],
+        "rmse": 1308.565,
+        "smape": 15.8615
+      },
+      "feature_set": "with_weather",
+      "model": "poisson"
+    },
+    {
+      "dev": {
+        "mae": 1016.3492,
+        "mase": 1.186,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 1136.6273,
+            "mase": 1.3264,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1506.2307,
+            "smape": 22.9291
+          },
+          {
+            "horizon": 2,
+            "mae": 869.4712,
+            "mase": 1.0146,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1215.5708,
+            "smape": 16.7363
+          },
+          {
+            "horizon": 3,
+            "mae": 722.1411,
+            "mase": 0.8427,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1018.7334,
+            "smape": 12.8908
+          },
+          {
+            "horizon": 4,
+            "mae": 1021.7216,
+            "mase": 1.1923,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1218.2336,
+            "smape": 18.7332
+          },
+          {
+            "horizon": 5,
+            "mae": 1022.0613,
+            "mase": 1.1927,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1262.0344,
+            "smape": 17.8628
+          },
+          {
+            "horizon": 6,
+            "mae": 989.3111,
+            "mase": 1.1545,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1296.8125,
+            "smape": 16.3768
+          },
+          {
+            "horizon": 7,
+            "mae": 1353.1111,
+            "mase": 1.579,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1628.9297,
+            "smape": 22.7302
+          }
+        ],
+        "rmse": 1319.9632,
+        "smape": 18.3227
+      },
+      "feature_set": "calendar_only",
+      "model": "random_forest"
+    },
+    {
+      "dev": {
+        "mae": 1030.9935,
+        "mase": 1.2031,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 1158.1261,
+            "mase": 1.3515,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1604.2786,
+            "smape": 22.0725
+          },
+          {
+            "horizon": 2,
+            "mae": 1002.3346,
+            "mase": 1.1697,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1446.9463,
+            "smape": 17.817
+          },
+          {
+            "horizon": 3,
+            "mae": 983.9559,
+            "mase": 1.1482,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1238.7392,
+            "smape": 15.8162
+          },
+          {
+            "horizon": 4,
+            "mae": 1087.9479,
+            "mase": 1.2696,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1331.1387,
+            "smape": 18.642
+          },
+          {
+            "horizon": 5,
+            "mae": 971.9083,
+            "mase": 1.1342,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1193.2294,
+            "smape": 15.4839
+          },
+          {
+            "horizon": 6,
+            "mae": 950.4174,
+            "mase": 1.1091,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1249.5478,
+            "smape": 14.5902
+          },
+          {
+            "horizon": 7,
+            "mae": 1062.2642,
+            "mase": 1.2396,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1418.9549,
+            "smape": 17.6556
+          }
+        ],
+        "rmse": 1361.3212,
+        "smape": 17.4396
+      },
+      "feature_set": "calendar_only",
+      "model": "poisson"
+    },
+    {
+      "dev": {
+        "mae": 1058.3585,
+        "mase": 1.2351,
+        "mase_scale": 856.9194,
+        "n": 231,
+        "naive_mae_same_rows": 1025.6407,
+        "per_horizon": [
+          {
+            "horizon": 1,
+            "mae": 1192.4491,
+            "mase": 1.3916,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1562.639,
+            "smape": 23.4542
+          },
+          {
+            "horizon": 2,
+            "mae": 869.7039,
+            "mase": 1.0149,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1194.9809,
+            "smape": 16.6082
+          },
+          {
+            "horizon": 3,
+            "mae": 712.1932,
+            "mase": 0.8311,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1005.8541,
+            "smape": 12.4215
+          },
+          {
+            "horizon": 4,
+            "mae": 1029.675,
+            "mase": 1.2016,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1251.0581,
+            "smape": 18.985
+          },
+          {
+            "horizon": 5,
+            "mae": 1106.2925,
+            "mase": 1.291,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1307.7053,
+            "smape": 19.3549
+          },
+          {
+            "horizon": 6,
+            "mae": 1102.2659,
+            "mase": 1.2863,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1345.1787,
+            "smape": 18.4496
+          },
+          {
+            "horizon": 7,
+            "mae": 1395.9296,
+            "mase": 1.629,
+            "mase_scale": 856.9194,
+            "n": 33,
+            "rmse": 1694.7349,
+            "smape": 23.539
+          }
+        ],
+        "rmse": 1354.2755,
+        "smape": 18.9732
+      },
+      "feature_set": "calendar_only",
+      "model": "gradient_boosting"
+    }
+  ]
+}

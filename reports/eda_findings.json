@@ -1,0 +1,55 @@
+{
+  "autocorrelation": {
+    "acf_lag1": 0.8462,
+    "acf_lag14": 0.7072,
+    "acf_lag21": 0.6779,
+    "acf_lag7": 0.7391,
+    "strongest": "lag_1"
+  },
+  "holiday": {
+    "drop_vs_nonholiday": 0.175,
+    "mean_on_holiday": 3735.0,
+    "mean_on_nonholiday": 4527.1,
+    "mean_on_workingday": 4584.8,
+    "n_holidays": 21
+  },
+  "temperature": {
+    "best_band": ">0.7",
+    "mean_by_temp_band": {
+      "0.3-0.5": 4001.8,
+      "0.5-0.7": 5583.8,
+      "<0.3": 2381.2,
+      ">0.7": 5663.7
+    },
+    "worst_band": "<0.3"
+  },
+  "weather": {
+    "mean_by_weather": {
+      "clear": 4876.8,
+      "light rain/snow": 1803.3,
+      "mist/cloudy": 4035.9
+    },
+    "rain_drop_vs_clear": 0.6302
+  },
+  "weekday": {
+    "busiest": "Fri",
+    "by_weekday": {
+      "Fri": 4690.3,
+      "Mon": 4338.1,
+      "Sat": 4550.5,
+      "Sun": 4228.8,
+      "Thu": 4667.3,
+      "Tue": 4510.7,
+      "Wed": 4548.5
+    },
+    "quietest": "Sun",
+    "weekend_over_weekday": 0.9646
+  },
+  "year": {
+    "growth_second_year": 0.6443,
+    "mean_by_year": {
+      "2011": 3405.8,
+      "2012": 5599.9
+    }
+  }
+}

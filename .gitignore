@@ -1,0 +1,13 @@
+# Raw dataset is auto-downloaded by src/run_all.fetch_raw_data. Committing a 700-row CSV
+# that the pipeline can rebuild is noise in the diff, and it is where a stale copy would hide.
+data/raw/
+*.zip
+
+# Artefacts ARE committed, deliberately. reports/figures/ in particular: the README documents
+# "7 PNGs" and tests/test_docs.py counts the PNGs on disk, so ignoring them would make a fresh
+# clone fail its own test suite. They are the documentation - a reader should see the charts
+# without running anything - and the JSONs are the numbers tests/test_docs.py checks the prose
+# against. What is ignored is only what a rebuild regenerates.
+__pycache__/
+*.pyc
+.pytest_cache/
